@@ -34,63 +34,9 @@ const content = `
     </div>
   </div>
 
-  <!-- IEEE-INSPIRED ILLUSTRATION -->
   <div class="hero-r">
     <div class="illustration">
-      <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" width="100%">
-        <defs>
-          <radialGradient id="glow" cx="50%" cy="55%" r="35%">
-            <stop offset="0%" stop-color="#7A2535" stop-opacity="0.35"/>
-            <stop offset="100%" stop-color="#7A2535" stop-opacity="0"/>
-          </radialGradient>
-          <linearGradient id="flesh" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#8B5E3C"/>
-            <stop offset="60%" stop-color="#7A4E2E"/>
-            <stop offset="100%" stop-color="#3D1F0A"/>
-          </linearGradient>
-          <radialGradient id="atm" cx="50%" cy="50%" r="70%">
-            <stop offset="0%" stop-color="#2A1208" stop-opacity="0"/>
-            <stop offset="100%" stop-color="#0D0604" stop-opacity="0.9"/>
-          </radialGradient>
-        </defs>
-        <rect width="520" height="420" fill="#120A06"/>
-        <rect width="520" height="420" fill="url(#atm)"/>
-        <ellipse cx="265" cy="220" rx="160" ry="110" fill="url(#glow)"/>
-        <path d="M 30 310 Q 40 270 55 240 Q 65 215 80 200 Q 90 188 100 192 L 108 190 Q 118 186 120 195 L 118 200 Q 128 188 132 195 L 130 202 Q 138 190 142 197 L 140 205 Q 148 193 154 200 L 152 210 Q 162 205 164 215 L 160 230 Q 168 238 164 250 L 155 258 Q 148 265 140 268 L 130 272 Q 112 278 100 280 L 80 285 Q 60 295 45 318 Z" fill="url(#flesh)" opacity="0.88"/>
-        <path d="M 152 210 Q 168 200 188 195 Q 208 188 230 185 Q 248 182 260 184 Q 268 185 266 192 Q 264 198 255 200 Q 240 202 222 205 Q 204 208 186 214 Q 170 220 158 228 Q 152 233 150 228 Q 148 220 152 210 Z" fill="url(#flesh)" opacity="0.9"/>
-        <ellipse cx="261" cy="193" rx="7" ry="5" fill="#A07050" opacity="0.5" transform="rotate(-8,261,193)"/>
-        <path d="M 95 235 Q 100 230 106 234" fill="none" stroke="#3D1F0A" stroke-width="1" opacity="0.4"/>
-        <path d="M 110 225 Q 116 220 122 224" fill="none" stroke="#3D1F0A" stroke-width="1" opacity="0.4"/>
-        <path d="M 125 218 Q 131 213 137 217" fill="none" stroke="#3D1F0A" stroke-width="1" opacity="0.4"/>
-        <path d="M 30 310 Q 80 290 150 275 Q 170 272 165 285 Q 130 305 60 330 Z" fill="#0D0604" opacity="0.5"/>
-        <g class="wire-group">
-        <path d="M 490 80 Q 470 95 450 115 Q 420 145 390 170 Q 365 192 345 205 Q 330 213 318 215 Q 308 216 306 210 Q 304 204 312 200 Q 326 195 344 186 Q 365 174 388 156 Q 416 132 444 106 Q 464 87 482 72 Z" fill="none" stroke="#5C1E28" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
-        <path d="M 490 80 Q 470 95 450 115 Q 420 145 390 170 Q 365 192 345 205 Q 330 213 318 215 Q 308 216 306 210 Q 304 204 312 200 Q 326 195 344 186 Q 365 174 388 156 Q 416 132 444 106 Q 464 87 482 72 Z" fill="none" stroke="#7A2535" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
-        <path d="M 490 105 Q 468 118 446 137 Q 418 162 390 185 Q 365 205 348 215 Q 334 222 322 222 Q 312 222 310 216 Q 308 210 317 207 Q 330 203 348 194 Q 370 182 393 164 Q 420 143 448 119 Q 468 101 488 88 Z" fill="none" stroke="#B85C42" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
-        <path d="M 490 105 Q 468 118 446 137 Q 418 162 390 185 Q 365 205 348 215 Q 334 222 322 222 Q 312 222 310 216 Q 308 210 317 207 Q 330 203 348 194 Q 370 182 393 164 Q 420 143 448 119 Q 468 101 488 88 Z" fill="none" stroke="#D4845A" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-        <path d="M 492 133 Q 468 144 444 162 Q 414 184 386 206 Q 360 225 340 233 Q 324 240 312 238 Q 302 236 301 229 Q 300 222 310 219 Q 324 215 342 208 Q 364 198 388 180 Q 414 160 442 139 Q 466 120 490 108 Z" fill="none" stroke="#A08550" stroke-width="7.5" stroke-linecap="round" opacity="0.98"/>
-        <path d="M 492 133 Q 468 144 444 162 Q 414 184 386 206 Q 360 225 340 233 Q 324 240 312 238 Q 302 236 301 229 Q 300 222 310 219 Q 324 215 342 208 Q 364 198 388 180 Q 414 160 442 139 Q 466 120 490 108 Z" fill="none" stroke="#C4A96A" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-        <path d="M 490 160 Q 466 168 442 185 Q 414 205 388 224 Q 362 242 344 250 Q 330 256 319 253 Q 310 250 310 243 Q 310 236 320 234 Q 334 230 352 223 Q 374 213 398 196 Q 424 177 450 158 Q 470 143 490 132 Z" fill="none" stroke="#6B4A2A" stroke-width="6" stroke-linecap="round" opacity="0.92"/>
-        <path d="M 490 160 Q 466 168 442 185 Q 414 205 388 224 Q 362 242 344 250 Q 330 256 319 253 Q 310 250 310 243 Q 310 236 320 234 Q 334 230 352 223 Q 374 213 398 196 Q 424 177 450 158 Q 470 143 490 132 Z" fill="none" stroke="#9C7248" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>
-        <path d="M 488 186 Q 464 192 440 206 Q 412 224 388 242 Q 364 258 347 266 Q 334 271 323 268 Q 315 265 315 258 Q 315 251 325 249 Q 338 246 356 238 Q 378 228 402 210 Q 426 192 450 174 Q 468 160 488 148 Z" fill="none" stroke="#7A7A56" stroke-width="5.5" stroke-linecap="round" opacity="0.88"/>
-        <path d="M 488 186 Q 464 192 440 206 Q 412 224 388 242 Q 364 258 347 266 Q 334 271 323 268 Q 315 265 315 258 Q 315 251 325 249 Q 338 246 356 238 Q 378 228 402 210 Q 426 192 450 174 Q 468 160 488 148 Z" fill="none" stroke="#A0A070" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
-        <path d="M 490 146 Q 466 156 442 173 Q 414 194 387 215 Q 362 233 343 241 Q 330 247 320 245 Q 312 243 312 237 Q 312 231 321 228 Q 334 224 351 217 Q 372 208 396 192 Q 422 174 448 155 Q 467 141 488 128 Z" fill="none" stroke="#EDE5D4" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
-        <path d="M 472 90 Q 478 115 480 140 Q 481 165 478 188" fill="none" stroke="#3D1F0A" stroke-width="14" stroke-linecap="round" opacity="0.6"/>
-        <path d="M 472 90 Q 478 115 480 140 Q 481 165 478 188" fill="none" stroke="#C4A96A" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
-        </g>
-        <circle cx="263" cy="197" r="4" fill="#C4A96A" opacity="0.6"/>
-        <circle cx="263" cy="197" r="8" fill="#A08550" opacity="0.2"/>
-        <circle cx="263" cy="197" r="14" fill="#7A2535" opacity="0.12"/>
-        <circle cx="312" cy="200" r="2.5" fill="#A08550" opacity="0.7"/>
-        <circle cx="310" cy="216" r="2" fill="#B85C42" opacity="0.6"/>
-        <circle cx="308" cy="230" r="2" fill="#7A7A56" opacity="0.5"/>
-        <circle cx="316" cy="243" r="2" fill="#6B4A2A" opacity="0.5"/>
-        <line x1="312" y1="200" x2="300" y2="198" stroke="#A08550" stroke-width="0.8" opacity="0.5"/>
-        <line x1="300" y1="198" x2="296" y2="204" stroke="#A08550" stroke-width="0.8" opacity="0.5"/>
-        <line x1="310" y1="216" x2="298" y2="218" stroke="#B85C42" stroke-width="0.8" opacity="0.4"/>
-        <line x1="40" y1="390" x2="480" y2="390" stroke="#A08550" stroke-width="0.4" opacity="0.15"/>
-        <text x="260" y="406" font-family="'Jost', sans-serif" font-size="9" letter-spacing="3" text-anchor="middle" fill="#A08550" opacity="0.45">YOUR HOME · YOUR HABITS</text>
-      </svg>
+      <img src="/hero.jpg" alt="Da Vinci Creation — human hand reaching toward robot arm" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" />
     </div>
   </div>
 </section>
