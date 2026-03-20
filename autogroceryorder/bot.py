@@ -2,9 +2,12 @@ import os
 import re
 import ssl
 import sqlite3
+import threading
+import time
 import urllib.parse
 
 import certifi
+import schedule
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 
@@ -17,6 +20,56 @@ app = App(client=client)
 
 STORE_NAME = "Whole Foods"
 WF_BRAND_ID = "VUZHIFdob2xlIEZvb2Rz"
+HOUSEADMIN_CHANNEL = "C0AM53D3K8W"
+
+# --- Scheduled Payments ---
+
+SCHEDULED_PAYMENTS = [
+    {
+        "day": "thursday",
+        "time": "21:00",
+        "name": "Sherry",
+        "amount": "$140",
+        "service": "PayPal",
+        "link": "https://paypal.me/sherry629/140",
+    },
+    {
+        "day": "monday",
+        "time": "12:00",
+        "name": "Leo",
+        "amount": "$170",
+        "service": "Venmo",
+        "link": "https://venmo.com/Leonardo_Souza?txn=pay&amount=170",
+    },
+]
+
+
+def send_payment_reminder(payment):
+    """Send a payment reminder to the houseadmin channel."""
+    client.chat_postMessage(
+        channel=HOUSEADMIN_CHANNEL,
+        text=(
+            f":moneybag: *Payment Reminder: {payment['name']}*\n\n"
+            f"Amount: *{payment['amount']}*\n"
+            f"Via: {payment['service']}\n\n"
+            f"<{payment['link']}|Click here to pay {payment['name']} {payment['amount']} on {payment['service']}>"
+        ),
+    )
+
+
+def setup_schedules():
+    """Set up weekly payment reminders."""
+    for payment in SCHEDULED_PAYMENTS:
+        day_func = getattr(schedule.every(), payment["day"])
+        day_func.at(payment["time"]).do(send_payment_reminder, payment)
+    print(f"Scheduled {len(SCHEDULED_PAYMENTS)} payment reminders")
+
+
+def run_scheduler():
+    """Run the scheduler in a background thread."""
+    while True:
+        schedule.run_pending()
+        time.sleep(30)
 
 # --- Database ---
 
@@ -465,6 +518,13 @@ def handle_guide(ack, command, respond):
             "*Favorites (saved product links):*\n"
             "• `/save almonds https://...` — Save a product URL so it links directly next time\n"
         ),
+        "payments": (
+            "*Payment Reminders:*\n\n"
+            "Automatic reminders are sent to #houseadmin:\n\n"
+            "• *Monday 12:00 PM* — Pay Leo $170 via Venmo\n"
+            "• *Thursday 9:00 PM* — Pay Sherry $140 via PayPal\n\n"
+            "Each reminder includes a direct payment link."
+        ),
     }
 
     if not text:
@@ -503,6 +563,10 @@ def handle_clear(ack, command, respond):
 # --- Start ---
 
 if __name__ == "__main__":
+    setup_schedules()
+    scheduler_thread = threading.Thread(target=run_scheduler, daemon=True)
+    scheduler_thread.start()
+
     handler = SocketModeHandler(app, os.environ["SLACK_APP_TOKEN"])
     print("Grocery bot is running!")
     handler.start()
