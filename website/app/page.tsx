@@ -133,48 +133,7 @@ const content = `
 
     <div class="phil-panel">
       <div class="phil-label">02 — Space mapped</div>
-      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="100%">
-        <rect width="400" height="400" fill="#F5EFE3"/>
-        <rect width="400" height="400" fill="#EDE5D4" opacity="0.4"/>
-        <rect x="130" y="0" width="140" height="280" fill="#FAF6EE" opacity="0.5"/>
-        <rect x="130" y="0" width="140" height="280" fill="none" stroke="#D4C8B8" stroke-width="1" opacity="0.4"/>
-        <path d="M 80 120 Q 140 108 200 112 Q 260 116 320 108" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 72 140 Q 138 126 200 130 Q 262 134 328 122" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 68 160 Q 136 148 200 152 Q 264 156 332 142" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 66 182 Q 136 172 200 176 Q 264 180 334 166" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 70 204 Q 138 196 200 200 Q 262 204 330 192" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 78 228 Q 140 222 200 226 Q 260 230 322 220" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.45"/>
-        <path d="M 90 254 Q 144 250 200 254 Q 256 258 310 250" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.4"/>
-        <path d="M 106 282 Q 152 280 200 284 Q 248 288 294 282" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.35"/>
-        <path d="M 80 120 Q 78 180 90 254 Q 96 270 106 282" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 110 115 Q 107 180 114 252 Q 118 270 128 284" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 140 112 Q 138 178 142 252 Q 144 270 150 284" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 170 111 Q 169 178 170 253 Q 170 271 172 285" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 200 112 Q 200 178 200 254 Q 200 271 200 285" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 230 112 Q 231 178 230 253 Q 230 271 228 285" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 260 114 Q 262 179 260 253 Q 260 271 258 285" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 290 118 Q 294 180 290 253 Q 290 271 290 285" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <path d="M 320 108 Q 328 176 322 222 Q 316 250 310 282" fill="none" stroke="#5C1E28" stroke-width="0.7" opacity="0.5"/>
-        <circle cx="140" cy="130" r="2.5" fill="#A08550" opacity="0.6"/>
-        <circle cx="200" cy="130" r="2.5" fill="#A08550" opacity="0.6"/>
-        <circle cx="260" cy="128" r="2.5" fill="#A08550" opacity="0.6"/>
-        <circle cx="170" cy="152" r="2" fill="#B85C42" opacity="0.5"/>
-        <circle cx="230" cy="150" r="2" fill="#B85C42" opacity="0.5"/>
-        <circle cx="200" cy="200" r="3" fill="#5C1E28" opacity="0.7"/>
-        <circle cx="200" cy="200" r="6" fill="none" stroke="#5C1E28" stroke-width="0.6" opacity="0.3"/>
-        <circle cx="80" cy="120" r="3" fill="#7A7A56" opacity="0.5"/>
-        <circle cx="320" cy="108" r="3" fill="#7A7A56" opacity="0.5"/>
-        <line x1="80" y1="120" x2="80" y2="60" stroke="#7A7A56" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.35"/>
-        <line x1="320" y1="108" x2="320" y2="60" stroke="#7A7A56" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.35"/>
-        <text x="68" y="56" font-family="'Jost', monospace" font-size="7" fill="#7A7A56" opacity="0.5" text-anchor="middle">node A</text>
-        <text x="332" y="56" font-family="'Jost', monospace" font-size="7" fill="#7A7A56" opacity="0.5" text-anchor="middle">node B</text>
-        <ellipse cx="200" cy="370" rx="160" ry="25" fill="#6B4A2A" opacity="0.18"/>
-        <path d="M 40 345 Q 200 330 360 345 L 360 400 L 40 400 Z" fill="#7A2535" opacity="0.07"/>
-        <line x1="200" y1="200" x2="310" y2="240" stroke="#A08550" stroke-width="0.6" opacity="0.4"/>
-        <text x="312" y="244" font-family="'Jost', monospace" font-size="7.5" fill="#A08550" opacity="0.6" letter-spacing="0.5">presence detected</text>
-        <text x="312" y="255" font-family="'Jost', monospace" font-size="6" fill="#A08550" opacity="0.4" letter-spacing="0.5">22°C · 44% RH</text>
-        <text x="30" y="378" font-family="'Cormorant Garamond', serif" font-size="13" fill="#5C1E28" opacity="0.35" font-style="italic">f(x) = ∂T/∂t · λ∇²T</text>
-      </svg>
+      <img src="/window-photo.jpg" alt="Window — space mapped" style="width:100%;display:block;object-fit:cover;aspect-ratio:1/1;" />
       <p class="phil-caption">The invisible geometry of your rooms, made visible only when you need it.</p>
     </div>
 
